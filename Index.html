@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test DISC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Test DISC</h1>
+        <p>Đánh dấu vào câu trả lời phù hợp nhất (Most) và không phù hợp nhất (Least)</p>
+        <form id="discTestForm">
+            <div id="questionsContainer"></div>
+            <div class="navigation-buttons">
+                <button type="button" id="prevButton" onclick="prevQuestion()">Lùi lại</button>
+                <button type="button" id="nextButton" onclick="nextQuestion()">Tiếp theo</button>
+                <button type="submit" id="submitButton" style="display: none;">Nộp kết quả</button>
+            </div>
+        </form>
+        <div id="resultContainer" class="result-container"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

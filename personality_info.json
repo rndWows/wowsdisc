@@ -1,0 +1,477 @@
+[
+    {
+        "personalityGroup": "DI",
+        "personalityName": "Người tìm kiếm (Thống Trị và Ảnh Hưởng)",
+        "style": [
+            "Bạn có xu hướng hành động và nhiệt tình. Tuy nhiên, thiên hướng hành động sẽ tập trung nhiều vào một nhiệm vụ hơn là một mối quan hệ.",
+            "Bạn là những người có ý chí mạnh mẽ, tự chủ và độc lập.",
+            "Bạn năng nổ và sẵn sàng hành động vì mọi người.",
+            "Bạn quyết đoán và táo bạo.",
+            "Bạn luôn được thúc đẩy bằng niềm tin chiến thắng và cạnh tranh để đạt tới thành công.",
+            "Bạn thích mang đến sự sáng tạo và đổi mới cho môi trường làm việc, luôn tìm kiếm những ý tưởng mới mẻ.",
+            "Những công việc lặp lại và nhàm chán sẽ dễ khiến bạn cảm thấy bực bội, khó chịu. Bên cạnh đó, chúng sẽ khiến bạn không phát huy hết được khả năng lãnh đạo bẩm sinh.",
+            "Bạn làm việc tốt theo nhóm với tiến độ làm việc khẩn trương và có định hướng rõ ràng.",
+            "Bạn có khả năng thích nghi nhanh chóng với môi trường, luôn tự chủ, yêu thích học hỏi và quan tâm vào kết quả cuối cùng.",
+            "Bạn phát triển tốt trong môi trường có nhiều sự thay đổi, hứng thú và tự phát hơn là những môi trường có nhịp độ chậm và tẻ nhạt."
+        ],
+        "leadershipStyle": [
+            "Bạn là nhà lãnh đạo tiên phong, tìm cách mở rộng giới hạn, tìm kiếm cơ hội và đạt được kết quả.",
+            "Bạn có phần hơi tự kiêu, khó thừa nhận sai lầm và có thể tạo áp lực cho người khác."
+        ],
+        "improvementPoints": [
+            "Bạn đôi khi lo lắng khi không thể kiểm soát quyền lực khiến bạn trở nên không kiên nhẫn, ép buộc người khác.",
+            "Bạn giải quyết vấn đề một cách trực diện. Đôi lúc, bạn bộc phát và nói những điều khiến bạn phải hối tiếc.",
+            "Bạn không quan trọng tiểu tiết nên những công việc yêu cầu sự tập trung vào các chi tiết nhỏ sẽ không phù hợp với bạn.",
+            "Bạn cần học cách kiên nhẫn, khiêm tốn và lắng nghe ý kiến từ người khác."
+        ],
+        "suitableCareers": [
+            "Giám đốc điều hành",
+            "Giám đốc kinh doanh",
+            "Giám đốc Marketing",
+            "Nhà báo",
+            "Nhân viên tiếp thị",
+            "Đại diện bán hàng",
+            "Diễn viên",
+            "Ca sĩ",
+            "Người mẫu",
+            "Diễn giả"
+        ]
+    },
+    {
+        "personalityGroup": "DC",
+        "personalityName": "Người thách thức (Thống trị và Tập Trung)",
+        "style": [
+            "Bạn là người có tính lãnh đạo (D) bị ảnh hưởng bởi sự tận tâm (C).",
+            "Bạn là người chăm chỉ, cứng rắn và sáng tạo.",
+            "Bạn là những người có ý chí mạnh mẽ, tự chủ và độc lập.",
+            "Bạn tự tin, chú trọng vào việc hoàn thành kết quả cuối cùng.",
+            "Bạn có tính thực thi cao và quyết liệt.",
+            "Bạn thích kiểm soát, rất chú ý đến chi tiết và quy trình. Bạn muốn đạt được kết quả nhưng không muốn làm sai lệch hoặc bỏ sót chi tiết.",
+            "Bạn ảnh hưởng đến người khác thông qua các tiêu chuẩn và sự quyết tâm mạnh mẽ để đạt được mục tiêu.",
+            "Bạn thường nhìn nhận vấn đề một cách thực tế và thận trọng khi đưa ra những quyết định có tính rủi ro. Tuy nhiên, điều này cũng có thể khiến bạn trở nên mất kiểm soát."
+        ],
+        "leadershipStyle": [
+            "Bạn có xu hướng trở thành nhà quản lý tập trung vào những con số và độ chính xác.",
+            "Bạn thường có thiên hướng lãnh đạo kiên quyết, đặt nhiều kỳ vọng và lên tiếng về vấn đề. Bạn có xu hướng quan tâm đến việc cải tiến các phương pháp và thủ tục."
+        ],
+        "improvementPoints": [
+            "Bạn có thể vội vàng để đạt được kết quả mong đợi nên đôi khi nhóm tính cách này dễ gây áp lực cho những thành viên khác trong team.",
+            "Bạn hãy từ tốn, bình tĩnh, làm việc chậm lại và dành thời gian để lắng nghe ý kiến của những người khác trong team.",
+            "Thay vì tập trung vào sự hài lòng tức thì của những chiến thắng ngắn hạn, bạn nên lùi lại một bước và quan tâm đến những lợi ích lâu dài.",
+            "Bạn thiên hướng về công việc nên bạn thường bỏ qua yếu tố con người nên thiếu sự ấm áp và quan tâm tới người khác.",
+            "Bạn thường phê phán thẳng thừng và cứng rắn. Cần giao tiếp khéo léo và mềm dẻo hơn."
+        ],
+        "suitableCareers": [
+            "GĐ điều hành",
+            "GĐ sản xuất",
+            "Kiến trúc sư",
+            "Luật sư",
+            "Bác sỹ",
+            "Quản lý dự án",
+            "Trưởng phòng",
+            "Giám đốc phòng ban"
+        ]
+    },
+    {
+        "personalityGroup": "D",
+        "personalityName": "Người chiến thắng (Thống trị)",
+        "style": [
+            "Bạn là những người có ý chí mạnh mẽ, tự chủ và độc lập.",
+            "Bạn tự tin, chú trọng vào việc hoàn thành kết quả cuối cùng.",
+            "Bạn luôn được thúc đẩy bằng niềm tin chiến thắng và cạnh tranh để đạt tới thành công.",
+            "Bạn có tính thực thi cao, quyết liệt và có thể làm nhiều việc cùng 1 lúc",
+            "Bạn thường đặt ra mục tiêu và không ngừng nỗ lực để đạt được chúng",
+            "Bạn cho rằng sự thay đổi và phát triển hàng ngày với những điều mới mẻ là mục tiêu hướng đến",
+            "Những công việc lặp lại và nhàm chán sẽ dễ khiến bạn cảm thấy bực bội, khó chịu. Bên cạnh đó, chúng sẽ khiến bạn không phát huy hết được khả năng lãnh đạo bẩm sinh.",
+            "Bạn có thể cố gắng quá nhiều cùng một lúc với hy vọng sẽ thấy kết quả nhanh chóng. Trong môi trường làm việc, bạn luôn tìm cách để thúc đẩy hiệu quả và tìm mọi cách để tiếp cận gần hơn với thành công.",
+            "Bạn là người rất chủ động, sẵn sàng chấp nhận mọi thách thức rủi ro trong cuộc sống, và rất có thể trong tương lai, bạn sẽ trở thành một nhà lãnh đạo xuất chúng."
+        ],
+        "leadershipStyle": [
+            "Kiểm soát, trao quyền, tốc độ, quyết liệt.",
+            "Bạn thường lãnh đạo với những đòi hỏi khắt khe.",
+            "Bạn đặc biệt quan tâm và tập trung vào kết quả.",
+            "Bạn cũng rất giỏi lập kế hoạch và có mục tiêu rõ ràng.",
+            "Tuy nhiên, lãnh đạo phong cách này, bạn có phần hơi tự kiêu, khó thừa nhận sai lầm và có thể tạo áp lực cho người khác."
+        ],
+        "improvementPoints": [
+            "Bạn khá bốc đồng, cộc cằn và đôi khi thậm chí có hơi thô lỗ.",
+            "Bạn có thể phớt lờ những rủi ro tiềm ẩn, không cân nhắc ưu nhược điểm và không xem xét ý kiến ​​của người khác. Bạn dễ đưa ra những ý tưởng sáng tạo và sự cải cách hệ thống nhưng sẽ cần một người khác để chia nhỏ dự án và làm việc với các chi tiết cụ thể.",
+            "Khi cảm thấy áp lực, bạn thường muốn dành sự tập trung nhiều hơn vào việc hoàn thành công việc. Điều đó có thể khiến bạn trở nên lãnh đạm và thiếu quan tâm đến cảm xúc của người khác.",
+            "Bạn không muốn mất đi quyền kiểm soát, thay vào đó, bạn muốn tập trung vào việc chủ động nhận lãnh trách nhiệm.",
+            "Bạn ít quan tâm đến cảm xúc của người khác nên đôi lúc vô tâm.",
+            "Bạn cũng cần lưu ý không trở nên quá bộc trực, thiếu kiên nhẫn, hay hoài nghi hoặc ép buộc người khác bằng ý muốn cá nhân.",
+            "Bạn cần tập luyện cách lắng nghe, cách chậm lại và cách để hiểu và nhạy cảm sâu sắc với người khác.",
+            "Bạn thích chinh phục mục tiêu mới nên không hứng thú với các công việc có yếu tố lặp lại và cần đến tiểu tiết. Do đó cũng cần được tập luyện thêm cách kiên nhẫn với công việc thường nhật và việc chi tiết."
+        ],
+        "suitableCareers": [
+            "Quản lý dự án",
+            "Doanh nhân",
+            "Giám đốc điều hành",
+            "Trưởng phòng",
+            "Chuyên viên tư vấn",
+            "Người bán hàng",
+            "Môi giới chứng khoán",
+            "Cảnh sát",
+            "Freelancer",
+            "Diễn giả"
+        ]
+    },
+    {
+        "personalityGroup": "S",
+        "personalityName": "Người hòa giải (Ổn định)",
+        "style": [
+            "Bạn là người thân thiện, hòa đồng những thiếu quyết đoán.",
+            "Bạn thường ít nói, sợ đám đông nhưng lại thích lắng nghe, tâm sự và hay quan tâm người khác.",
+            "Bạn rất xem trọng gia đình và bạn bè và sẽ tuyệt đối bảo vệ nhóm mà bạn chơi chung. Bạn cũng rất coi trọng sự công bằng và công lý.",
+            "Bạn lạc quan, thụ động, và luôn cố gắng duy trì sự ổn định trong môi trường xã hội và công việc. Điều này khiến bạn trở thành đối tác đáng tin cậy trong các dự án và cam kết lâu dài.",
+            "Bạn thường đóng vai trò là cầu nối giữa người quản lý và đồng nghiệp của bạn, bởi vì bạn có khả năng hiểu tất cả các khía cạnh của một tình huống.",
+            "Bạn là những người biết lắng nghe, thấu hiểu tốt, thích mối quan hệ gần gũi như cởi mở với những người thân yêu. Điều này khiến bạn trở thành những người hòa giải hiệu quả.",
+            "Bạn là những người chu đáo và luôn cân nhắc trong mọi hành động của mình. Bạn thích một môi trường làm việc có nhịp độ chậm hơn và an toàn.",
+            "Bạn thích tuân theo các khuôn mẫu và tránh các vấn đề xảy ra bất chợt. Do đó, bạn có xu hướng chống lại sự thay đổi và sẽ mất thời gian để thích nghi với các tình huống mới."
+        ],
+        "leadershipStyle": [
+            "Hòa nhập, Khiêm tốn, Khẳng định.",
+            "Bạn dựa trên kinh nghiệm, chuyên môn và tình trạng của tổ chức.",
+            "Bạn thoải mái khi là người lãnh đạo trong việc duy trì thói quen và sự ổn định.",
+            "Bạn có thiên hướng về dịch vụ. Bạn thích dẫn dắt những nhóm nhỏ.",
+            "Bạn thuộc phong cách lãnh đạo hợp tác."
+        ],
+        "improvementPoints": [
+            "Bạn có thể tránh né xung đột và khá khó khăn trong việc đối diện với sự thay đổi.",
+            "Bạn không có khả năng chấp nhận rủi ro, bất kể lợi ích mà nó mang lại lớn đến cỡ nào. Lối an nhàn này có thể làm bạn mất đi một số cơ hội phát triển lớn.",
+            "Bạn rụt rè nên cần thời gian để mọi thứ trở nên thân thuộc trước khi bạn có thể tự tin hòa nhập vào chúng.",
+            "Bạn quá nhạy cảm, hành động chưa quyết liệt và thiết lập mục tiêu chưa cao."
+        ],
+        "suitableCareers": [
+            "Dịch vụ khách hàng",
+            "Nhân viên tư vấn",
+            "Giám đốc nhân sự",
+            "Y tá",
+            "Nhà trị liệu",
+            "Giáo viên"
+        ]
+    },
+    {
+        "personalityGroup": "SC",
+        "personalityName": "Kỹ thuật viên (Ổn định và Tuân thủ)",
+        "style": [
+            "Bạn là sự kết hợp giữa tính kiên định của nhóm tính cách S và sự tận tâm của nhóm tính cách C.",
+            "Bạn có xu hướng dễ chịu, kiên nhẫn và đáng tin cậy. Bạn gây ảnh hưởng đến người khác thông qua ngoại giao và tự chủ và nhất quán.",
+            "Bạn rất xem trọng gia đình và bạn bè và sẽ tuyệt đối bảo vệ nhóm mà bạn chơi chung. Bạn cũng rất coi trọng sự công bằng và công lý.",
+            "Bạn lạc quan, thụ động, và luôn cố gắng duy trì sự ổn định trong môi trường xã hội và công việc. Điều này khiến bạn trở thành đối tác đáng tin cậy trong các dự án và cam kết lâu dài.",
+            "Bạn thường đóng vai trò là cầu nối giữa người quản lý và đồng nghiệp của bạn, bởi vì bạn có khả năng hiểu tất cả các khía cạnh của một tình huống.",
+            "Bạn thích lập kế hoạch và lập ra các quy tắc, hướng dẫn.",
+            "Bạn rất cẩn thận và tỉ mẫn.",
+            "Bạn là những người có sự tập trung vào chi tiết, tính chính xác và độ tỉ mỉ.",
+            "Bạn được mô tả là người điềm đạm và đáng tin cậy.",
+            "Bạn là những người tìm kiếm môi trường có tổ chức, đặt ra và hoàn thành những mục tiêu đã đặt ra."
+        ],
+        "leadershipStyle": [
+            "Khiêm tốn và công bằng, chu đáo, thận trọng.",
+            "Bạn hợp tác với các thành viên trong nhóm.",
+            "Bạn thích lên kế hoạch cẩn thận, chi tiết mọi thứ.",
+            "Bạn bình tĩnh đến mức không phải lúc nào nhân viên cũng chắc chắn liệu bạn có tự mãn hay không.",
+            "Bạn muốn nhân viên tuân theo quy tắc và làm những gì hai bên thỏa thuận.",
+            "Bạn truyền đạt rõ ràng các kỳ vọng và mục tiêu. Đồng thời chuẩn bị kỹ lưỡng để đạt được các mục tiêu đã đặt ra.",
+            "Bạn mang lại kết quả đáng tin cậy thông qua sự ổn định và nhất quán. Bạn cũng có thể cứng nhắc, thận trọng quá mức và ngại vượt ra khỏi hiện trạng."
+        ],
+        "improvementPoints": [
+            "Bạn có thể cảm thấy bất an trước và do dự trước những quyết định không chắc chắn.",
+            "Bạn thường thiếu sự linh hoạt trong việc thích ứng với tình huống mới.",
+            "Bạn thường suy nghĩ quá nhiều và quá nhạy cảm.",
+            "Bạn thường gặp áp lực khi bị giao quá nhiều việc cùng lúc và thay đổi liên tục.",
+            "Bạn là người hướng nội nên việc mở rộng mối quan hệ là việc khó khăn đối với bạn."
+        ],
+        "suitableCareers": [
+            "Kiểm định chất lượng",
+            "Nhân sự",
+            "Kế toán, kiểm toán",
+            "Data analyst",
+            "Dược sĩ/ nhân viên y tế",
+            "Nhà khoa học, nhà nghiên cứu",
+            "Kỹ thuật viên",
+            "Quản lý dự án"
+        ]
+    },
+    {
+        "personalityGroup": "SI",
+        "personalityName": "Người Cộng tác (Ổn định và Ảnh Hưởng)",
+        "style": [
+            "Bạn là sự kết hợp giữa sự ổn định (S) với ảnh hưởng (I).",
+            "Bạn là kết hợp giữa khả năng giao tiếp tốt và sự kiên nhẫn, hoà nhã.",
+            "Bạn là người hào phóng, dễ gần và giàu lòng trắc ẩn.",
+            "Bạn được biết đến bởi tính nhiệt tình, khả năng hợp tác và sự hỗ trợ đối với người khác.",
+            "Bạn xuất sắc trong việc gắn kết các thành viên trong nhóm lại với nhau để làm việc hiệu quả hơn.",
+            "Bạn có xu hướng đồng cảm, kiên nhẫn, biết lắng nghe và quan tâm đến cảm xúc của các thành viên trong nhóm. Bạn là người phù hợp cho vai trò kết nối trong một đội nhóm.",
+            "Do những phẩm chất này, bạn thích hợp hoạt động theo nhóm và có thể phát triển thành những nhà lãnh đạo tuyệt vời.",
+            "Bạn có thể làm việc độc lập nhưng luôn phải có cộng tác với những người khác."
+        ],
+        "leadershipStyle": [
+            "Bạn có xu hướng thoải mái, kiên nhẫn.",
+            "Bạn sẵn sàng hỗ trợ nhân viên cũng như đồng nghiệp.",
+            "Bạn đôi khi gặp khó khăn khi đối mặt với vấn đề và thừa nhận khuyết điểm của người khác."
+        ],
+        "improvementPoints": [
+            "Bạn thiên hướng về con người, không thiên hướng về công việc nên cần phải thiết lập mục tiêu, quy trình, nguyên tắc để hoạt động của đội nhóm đạt hiệu quả tối đa.",
+            "Bạn giàu lòng trắc ẩn và dễ tin người nên dễ bị người khác lợi dụng.",
+            "Bạn cần tập cách nói 'Không' khi cần thiết.",
+            "Tuy nhiên, Bạn có thể cảm thấy không thoải mái trong mọi mâu thuẫn. Vì thế Bạn thường tránh tranh luận hoặc không muốn tạo áp lực cho người khác."
+        ],
+        "suitableCareers": [
+            "Cố vấn học tập",
+            "Nhân viên tư vấn",
+            "Quan hệ công chúng",
+            "Nhân sự",
+            "Quản trị nhân lực",
+            "Giáo viên",
+            "Nhà trị liệu"
+        ]
+    },
+    {
+        "personalityGroup": "ID",
+        "personalityName": "Người chấp nhận rủi ro (Ảnh Hưởng và Thống Trị)",
+        "style": [
+            "Bạn thường hướng ngoại, thích sự sáng tạo, quyết đoán và luôn sẵn sàng với mọi thách thức.",
+            "Bạn có nguồn năng lượng dồi dào, lôi cuốn và mạo hiểm.",
+            "Bạn ảnh hưởng đến người khác thông qua sự táo bạo và đam mê.",
+            "Bạn là người dám nghĩ dám làm hoặc có đầu óc kinh doanh.",
+            "Bạn hướng đến hành động nhưng nghiêng về việc tập trung vào mối quan hệ hơn là nhiệm vụ.",
+            "Bạn nổi bật với sự cuốn hút, tự tin, động lực, thân thiện, khả năng thuyết phục và khích lệ người khác.",
+            "Bạn là người rất linh hoạt và giỏi trong việc tạo dựng các mối quan hệ cá nhân.",
+            "Bạn ghi điểm với kỹ năng giao tiếp xã hội xuất sắc và khả năng sáng tạo ấn tượng, biến bạn thành những người nổi trội trong mọi tập thể."
+        ],
+        "leadershipStyle": [
+            "Bạn tìm cách phá vỡ giới hạn bản thân, tìm cơ hội và truyền cảm hứng hành động cho những người khác.",
+            "Có thể bị coi là tự đề cao, đe dọa hoặc không chân thành."
+        ],
+        "improvementPoints": [
+            "Bạn là người tham vọng và thiếu kiên nhẫn và ưa thích mạo hiểm.",
+            "Bạn có thể phản ứng mạnh mẽ khi bị hạn chế trong quyền hạn.",
+            "Bạn cần luyện tập khả năng kiểm soát cảm xúc của mình.",
+            "Bạn cần tập trung vào chi tiết, kiên nhẫn và học cách lắng nghe người khác.",
+            "Bạn cần phân tích kỹ hơn trước khi đưa ra một quyết định, tránh những sai lầm không đáng có."
+        ],
+        "suitableCareers": [
+            "Doanh nhân",
+            "Quảng cáo",
+            "Bán hàng",
+            "Tư vấn dịch vụ và tài chính",
+            "Sales thị trường",
+            "Quản trị nhân lực",
+            "Quản lý nghệ sĩ"
+        ]
+    },
+    {
+        "personalityGroup": "IS",
+        "personalityName": "Người bạn (Ảnh hưởng và Ổn định)",
+        "style": [
+            "Bạn là sự kết hợp của hai phong cách định hướng vào con người, I và S",
+            "Bạn là người hướng ngoại, ấm áp, thân thiện và hòa đồng, ảnh hưởng đến người khác thông qua sự dễ chịu và đồng cảm của bạn.",
+            "Sự nhiệt tình của bạn thể hiện thông qua sự hỗ trợ về tình cảm và nghề nghiệp cho người khác.",
+            "Bạn tự tin, nhận thức và dễ gần, và làm việc tại trung tâm xã hội của đội nhóm.",
+            "Bạn là người đồng cảm, giải quyết vấn đề xuất sắc, đặc biệt trong lĩnh vực xã hội. Tuy nhiên, bạn sợ sẽ bị người khác chán ghét bởi những khuyết điểm của bản thân. Cho nên đôi khi sự hy sinh trong mối quan hệ của bạn lại gây tổn thương.",
+            "Bạn là người biết lắng nghe và đồng cảm. Mục tiêu chính của bạn là thúc đẩy người khác và giúp bạn phát triển trong khả năng của mình.",
+            "Bạn cảm thấy hài lòng nhất khi tương tác với những người xung quanh và thường sử dụng lòng tốt của mình để xây dựng các mối quan hệ bền chặt."
+        ],
+        "leadershipStyle": [
+            "Bạn hỗ trợ người xung quanh, tôn trọng, tích cực và không thích sự xung đột.",
+            "Bạn xây dựng môi trường làm việc thoải mái, dễ chịu.",
+            "Các nhà lãnh đạo theo phong cách IS có xu hướng làm việc không phân cấp bậc. Mục tiêu và trách nhiệm luôn được chia sẻ.",
+            "Bạn tập trung vào phản hồi tích cực với nhân viên và tránh đưa ra phản hồi tiêu cực.",
+            "Bạn lãnh đạo với vai trò là người điều hành nhiều hơn là một quản lý."
+        ],
+        "improvementPoints": [
+            "Bạn có thể gặp khó khăn khi đưa ra các quyết định hoặc kế hoạch hợp lý.",
+            "Bạn thiên hướng về con người, không thiên hướng về công việc nên cần phải thiết lập mục tiêu, quy trình, nguyên tắc để hoạt động của đội nhóm đạt hiệu quả tối đa.",
+            "Bạn thiếu quyết liệt và kiên trì trong công việc. Điều này dẫn đến kết quả công việc chưa cao.",
+            "Bạn cần tập luyện thói quen follow mục tiêu và kiên nhẫn khi làm việc với tiểu tiết.",
+            "Bạn ưa thích công việc có tính tự do nên đôi khi không tuân thủ quy trình và các công việc có tính tổ chức.",
+            "Bạn thường gặp khó khăn trong việc lên kế hoạch công việc để đạt được mục tiêu.",
+            "Kiểm soát cảm xúc cũng là điều bạn cần cải thiện."
+        ],
+        "suitableCareers": [
+            "Copywriter",
+            "Linh mục",
+            "Quan hệ công chúng",
+            "Sale",
+            "Giáo viên"
+        ]
+    },
+    {
+        "personalityGroup": "CD",
+        "personalityName": "Người cầu toàn (Tuân thủ và Thống trị)",
+        "style": [
+            "Bạn thể hiện sự kết hợp giữa các 1. Đặc điểm tận tâm (C) và thống trị (D).",
+            "Bạn là những người độc lập, đa nghi, quyết tâm và kỷ luật.",
+            "Bạn thường có tư duy phân tích và phản biện, đặt ra những tiêu chuẩn cao và lo sợ thất bại.",
+            "Tuy nhiên, đôi khi bạn có thể trở bướng bỉnh và tự ti trước những quyết định của bạn.",
+            "Kiểu tính cách này sẽ quyết đoán ở nơi làm việc.",
+            "Bạn thường là người quản lý, bạn đặt ra các tiêu chuẩn cao và sẽ tham gia thảo luận gay gắt với nhân viên nếu kỳ vọng không được đáp ứng dẫn đến một số nhân viên dễ bị quá tải."
+        ],
+        "leadershipStyle": [
+            "Bạn lãnh đạo kết hợp của phong cách định hướng nhiệm vụ C và D.",
+            "Bạn có xu hướng hoài nghi, cứng đầu và kỷ luật.",
+            "Bạn thích hình thức lãnh đạo tập trung và độc đoán.",
+            "Bạn mong sự tuân thủ và khó chấp nhận sai sót, thay đổi trái phép.",
+            "Bạn có xu hướng ủng hộ môi trường phân cấp, trong khi vẫn nhấn mạnh chủ nghĩa cá nhân.",
+            "Bạn thích cách tiếp cận có cấu trúc và thực tế trong khi dựa trên thông tin chi tiết.",
+            "Bạn biết những gì bạn muốn và biết làm thế nào để làm điều đó. Nhưng thường chỉ theo cách của bạn.",
+            "Bạn được thúc đẩy bởi những nhiệm vụ đầy thách thức và có lợi tức đầu tư cao.",
+            "Bạn luôn đặt câu hỏi, không ngại thách thức hiện trạng để đạt được kết quả tốt hơn. Bạn cũng có thể là những nhà lãnh đạo hoài nghi, thiếu đồng cảm, những người có thể tạo ra một vòng xoáy tiêu cực cho mọi thứ."
+        ],
+        "improvementPoints": [
+            "Bạn hãy xem xét cách quản lý của mình. Bạn cần mềm mỏng hơn trong việc truyền đạt vấn đề cho nhân viên để khuyến khích bạn làm tốt hơn trong tương lai.",
+            "Bạn thiên hướng quan tâm tới công việc hơn là con người nên thiếu sự cảm thông và đôi lúc vô tâm.",
+            "Bạn nguyên tắc, nghiêm khắc và quyết liệt nên trong tập thể sẽ có nhiều người không thể đáp ứng được nhịp độ và kỳ vọng của bạn."
+        ],
+        "suitableCareers": [
+            "Kiến trúc sư",
+            "Chiến gia tư vấn kinh doanh",
+            "Giám đốc",
+            "Giám đốc tài chính (CFO)",
+            "Người quản lý",
+            "Bác sĩ"
+        ]
+    },
+    {
+        "personalityGroup": "CS",
+        "personalityName": "Người làm nền tảng (Tuân thủ và Ổn định)",
+        "style": [
+            "Tính cách CS nhấn mạnh đến sự tận tâm (C) và chịu ảnh hưởng của tính ổn định (S).",
+            "Bạn là người hướng nội.",
+            "Bạn có tính cách tận tâm và kiên định. Bạn tập trung vào mục tiêu và có khả năng làm việc một cách kiên nhẫn để đạt được kết quả.",
+            "Bạn có khả năng tư duy logic, cầu toàn, đề cao chất lượng công việc và chịu được áp lực.",
+            "Bạn được đánh giá cao về sự thận trọng, trật tự, thực tế và đề cao sự chính xác đến từng chi tiết.",
+            "Bạn rất mạnh về việc lập kế hoạch, tính hệ thống hóa và khả năng giải quyết vấn đề.",
+            "Bạn yêu thích sự ổn định, cảm thấy mất cân bằng khi có những biến động phát sinh, nhưng cũng rất nhanh chóng bình tĩnh lại và tìm hướng xử lý vì ý thức trách nhiệm của bạn rất cao.",
+            "Bạn là người đáng tin cậy, có tổ chức và nghiêm túc trong mọi công việc.",
+            "Tính kiên nhẫn và khả năng làm việc cẩn thận giúp bạn luôn sẵn sàng cho các kế hoạch.",
+            "Bạn là người rất có trách nhiệm.",
+            "Bạn tập trung vào các chi tiết và xem xét những gì người khác không có nên bạn có xu hướng trở thành người giải quyết vấn đề rất tốt và là những người rất sáng tạo trong cách giải quyết vấn đề.",
+            "Cho dù nghiên cứu một chủ đề mới hay phân tích một tập dữ liệu quan trọng, bạn đều có thể làm việc rất hiệu quả và kỹ lưỡng, đặc biệt là khi bạn được làm những gì mình yêu thích."
+        ],
+        "leadershipStyle": [
+            "Các nhà lãnh đạo theo phong cách CS khiêm tốn và công bằng, mang lại kết quả đáng tin cậy thông qua sự ổn định và nhất quán.",
+            "Bạn cũng có thể cứng nhắc, thận trọng quá mức và không muốn vượt ra khỏi khuôn khổ."
+        ],
+        "improvementPoints": [
+            "Bạn có thể trở nên thụ động, nhút nhát và dè chừng trước các tình huống cảm xúc hoặc không lường trước.",
+            "Bạn cần linh hoạt, quyết đoán và quyết định nhanh hơn.",
+            "Bạn có thể cảm thấy thoải mái hơn khi không phải đặt câu hỏi, người leader cần lưu ý khi đưa ra hướng dẫn cho CS.",
+            "Bạn thích những công việc lặp đi lặp lại, ít có sự phát sinh, nhưng như vậy, cơ hội phát triển nghiệp vụ và thăng tiến cấp bậc sẽ bị hạn chế.",
+            "Bạn cần rèn luyện sự linh hoạt nhiều hơn, chấp nhận thách thức trong công việc để cải thiện tốc độ giải quyết vấn đề. Qua đó, khả năng quyết đoán và nhìn nhận tổng quát sẽ được cải thiện đáng kể.",
+            "Bạn ít cởi mở và ít thể hiện cảm xúc của mình nên người khác khó hiểu bạn.",
+            "Bạn sợ bị chỉ trích và sợ làm sai nên thiếu sự mạo hiểm.",
+            "Bạn phân tích quá nhiều nên đôi khi bỏ qua nhiều cơ hội quan trọng. Bạn cần cải thiện khả năng đưa ra quyết định nhanh.",
+            "Bạn nhạy bén với cảm xúc và nhu cầu của người khác. Tuy nhiên, bạn cứng nhắc, khắt khe và thích cô lập bản thân."
+        ],
+        "suitableCareers": [
+            "Kiểm soát viên không lưu",
+            "Quản trị cơ sở dữ liệu",
+            "Nhà khoa học nghiên cứu",
+            "Quản trị hệ thống"
+        ]
+    },
+    {
+        "personalityGroup": "I",
+        "personalityName": "Người nhiệt tình (Ảnh hưởng)",
+        "style": [
+            "Bạn là những người nhiệt tình, năng nổ và hòa đồng.",
+            "Bạn là người rất hoạt ngôn.",
+            "Bạn là kiểu mẫu đối tác yêu thích của đa số mọi người bởi tài năng bẩm sinh trong việc giao tiếp, kết nối và truyền cảm hứng.",
+            "Bạn lạc quan và đầy năng lượng.",
+            "Bạn thường muốn được công nhận và trở thành người ảnh hưởng trong xã hội.",
+            "Bạn là người sáng tạo và đầy ắp ý tưởng.",
+            "Bạn có khả năng thích nghi cao cũng như rất cởi mở với những gì mới mẻ xung quanh. Bạn ghét cảm giác khô khan, cứng nhắc và thân thuộc đến nhàm chán.",
+            "Bạn rất sợ mất đi khả năng tạo sức ảnh hưởng ấy của mình. Sự thờ ơ, lạnh nhạt và những hành động khác biểu thị thái độ từ chối tham gia của các thành viên trong nhóm sẽ ngay lập tức khiến bạn bị stress và gần như không còn tinh thần làm việc nữa. Ngược lại, sự công nhận và hưởng ứng tích cực từ mọi người chính là 'liều doping' hữu hiệu nhất đối với bạn.",
+            "Vì khá lạc quan và khao khát được yêu thích, bạn có thể hứa hẹn quá nhiều.",
+            "Bạn không phải là người thực sự biết lắng nghe. Bạn muốn được bộc lộ bản thân qua lời nói thay vì thực sự lắng nghe những gì người khác đang nói.",
+            "Ngoài ra, sự nhiệt tình và giàu năng lượng của bạn dễ trở nên thái quá và gây áp lực đối với những người có tính cách hướng nội."
+        ],
+        "leadershipStyle": [
+            "Bạn có khả năng tạo ra môi trường làm việc vô cùng ấm áp, thân thiện, vui vẻ và tràn đầy năng lượng như hình ảnh của chính bản thân bạn."
+        ],
+        "improvementPoints": [
+            "Bạn ưu tiên tập trung vào còn người nên đôi lúc bỏ qua sự tập trung vào công việc, dẫn đến chưa đạt kết quả công việc.",
+            "Bạn hơi thiếu tổ chức, làm việc tùy hứng và hay bốc đồng.",
+            "Bạn thường trễ hạn và cũng hay thay đổi kế hoạch khiến công việc của tập thể bị đảo lộn theo.",
+            "Bạn cũng gặp khó khăn khi bị kiểm soát chặt hoặc bắt buộc phải tập trung trong thời gian dài.",
+            "Bạn cần tập luyện thói quen follow mục tiêu và kiên nhẫn khi làm việc vơi tiểu tiết.",
+            "Bạn ưa thích công việc có tính tự do nên đôi khi không tuân thủ quy trình và các công việc có tính tổ chức.",
+            "Bạn thường gặp khó khăn trong việc lên kế hoạch công việc để đạt được mục tiêu.",
+            "Đôi khi, bạn có thể trở nên nhạy cảm và lo lắng khi bị bỏ qua hoặc không được người khác lắng nghe.",
+            "Kiểm soát cảm xúc cũng là điều bạn cần cải thiện."
+        ],
+        "suitableCareers": [
+            "Giám đốc sáng tạo",
+            "Thiết kế đồ họa",
+            "Thiết kế thời trang",
+            "Kiến trúc sư",
+            "Nhiếp ảnh",
+            "Ca sĩ/ Nhạc sĩ",
+            "Diễn viên",
+            "Họa sĩ",
+            "Quan hệ công chúng",
+            "Môi giới nhà đất",
+            "Tư vấn bảo hiểm",
+            "Truyền thông- Marketing",
+            "Người viết nội dung",
+            "Dịch vụ lữ hành"
+        ]
+    },
+    {
+        "personalityGroup": "C",
+        "personalityName": "Nhà phân tích (Tuân thủ)",
+        "style": [
+            "Bạn là những người theo chủ nghĩa hoàn hảo. Bạn có tiêu chuẩn rất cao cho cả bản thân và người khác.",
+            "Bạn chú trọng làm việc một cách tận tâm trong các tình huống hiện có để đảm bảo chất lượng và độ chính xác.",
+            "Bạn được thúc đẩy bởi các cơ hội để có được kiến thức, thể hiện chuyên môn của họ và tạo ra chất lượng công việc.",
+            "Bạn rất mạnh về việc lập kế hoạch, tính hệ thống hóa và khả năng giải quyết vấn đề.",
+            "Bạn là những người có sự tập trung vào chi tiết, tính chính xác, tỉ mỉ và tuân thủ.",
+            "Bạn suy nghĩ một cách rất khoa học và có hệ thống và đưa ra quyết định cẩn thận sau khi đã tiến hành nghiên cứu kỹ lưỡng, thu thập nhiều thông tin để hỗ trợ.",
+            "Bạn có xu hướng rất logic và không dễ bị cảm xúc chi phối, điều này có thể có lợi khi làm việc theo nhóm.",
+            "Bạn rất lý trí và không thể bị bất cứ một tác động ngoại cảnh nào ảnh hưởng đến quyết định cuối cùng của mình.",
+            "Bạn rất tập trung và sâu sắc, nhưng bạn yêu cầu các dự án phải thu hút được sự quan tâm của bạn.",
+            "Bạn có tính kỷ luật cao và kiên trì theo đuổi mục tiêu.",
+            "Bạn tập trung vào các chi tiết và xem xét những gì người khác không có nên bạn có xu hướng trở thành người giải quyết vấn đề rất tốt và là những người rất sáng tạo trong cách giải quyết vấn đề.",
+            "Cho dù nghiên cứu một chủ đề mới hay phân tích một tập dữ liệu quan trọng, bạn đều có thể làm việc rất hiệu quả và kỹ lưỡng, đặc biệt là khi bạn được làm những gì mình yêu thích."
+        ],
+        "leadershipStyle": [
+            "Thận trọng, khiêm tốn, kiên quyết.",
+            "Bạn dựa trên các quy tắc và tiêu chuẩn đã được chứng minh.",
+            "Bạn thích giữ khoảng cách với mọi người.",
+            "Bạn nhấn mạnh các quy tắc và tập trung chất lượng.",
+            "Bạn quan tâm nhiều hơn đến sự thật, chi tiết và phân tích.",
+            "Bạn làm việc chăm chỉ để đạt được kiến thức, kỹ năng sâu rộng.",
+            "Bạn thường dẫn đầu về chuyên môn và được coi là chuyên gia trong lĩnh vực phụ trách.",
+            "Bạn tạo ra môi trường làm việc có tổ chức, có quy tắc và có hệ thống.",
+            "Bạn là nhà lãnh đạo kỷ luật, hiểu biết.",
+            "Bạn coi trọng bằng chứng, thích làm việc qua văn bản và email.",
+            "Bạn thiên hướng khắt khe trong lãnh đạo."
+        ],
+        "improvementPoints": [
+            "Bạn ít cởi mở và ít thể hiện cảm xúc của mình nên người khác khó hiểu bạn.",
+            "Đôi lúc bạn trở nên lãnh đạm.",
+            "Thỉnh thoảng, bạn thực dụng và thiếu linh hoạt trong đối mặt với những thách thức bất ngờ.",
+            "Bạn có thể bị hạn chế bởi sự quá khắt khe, sự phân tích quá mức và cô lập chính mình.",
+            "Bạn thiên về môi trường làm việc có nhịp độ chậm hơn.",
+            "Bạn sợ bị chỉ trích và sợ làm sai nên thiếu sự mạo hiểm.",
+            "Bạn phân tích quá nhiều nên đôi khi bỏ qua nhiều cơ hội quan trọng. Bạn cần cải thiện khả năng đưa ra quyết định nhanh.",
+            "Khi căng thẳng, bạn tỏ ra ương ngạnh và lãnh đạm. Điều này cũng gây khó khăn cho người khác khi làm bạn với bạn."
+        ],
+        "suitableCareers": [
+            "Lập trình viên",
+            "Quản trị mạng",
+            "Phân tích đầu tư",
+            "Kế toán/ kiểm toán",
+            "Kỹ sư",
+            "Chuyên gia",
+            "Nhà nghiên cứu",
+            "Nhà phân tích",
+            "Nhà khoa học",
+            "Nhà hiền triết",
+            "Giáo sư",
+            "Thám tử"
+        ]
+    }
+]
