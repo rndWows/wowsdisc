@@ -198,12 +198,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const results = [];
             const mostCounts = { D: 0, I: 0, S: 0, C: 0 };
             const leastCounts = { D: 0, I: 0, S: 0, C: 0 };
-
+        
             for (let question of questionsData) {
                 const questionNumber = question.id.toString();
                 const mostSelected = userAnswers[questionNumber] && userAnswers[questionNumber].most;
                 const leastSelected = userAnswers[questionNumber] && userAnswers[questionNumber].least;
-
+        
                 if (mostSelected && leastSelected) {
                     const mostGroup = question.options[mostSelected - 1].group;
                     const leastGroup = question.options[leastSelected - 1].group;
@@ -212,14 +212,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     results.push({
                         question: questionNumber,
                         most: question.options[mostSelected - 1].text,
-                        least: question.options[leastSelected - 1].text
+                        least: question.options[mostSelected - 1].text
                     });
                 }
             }
-
+        
             const mostGroups = Object.entries(mostCounts).sort((a, b) => b[1] - a[1]);
             let topMostGroups = mostGroups.slice(0, 2);
-
+        
             if (topMostGroups[0][1] === topMostGroups[1][1]) {
                 const firstGroup = topMostGroups[0][0];
                 const secondGroup = topMostGroups[1][0];
@@ -227,22 +227,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     topMostGroups = [[secondGroup, mostCounts[secondGroup]], [firstGroup, mostCounts[firstGroup]]];
                 }
             }
-
+        
             const personalityType = topMostGroups.map(group => group[0]).join('');
-
+        
             const personalityInfo = personalityData.find(info => info.personalityGroup === personalityType);
-            const personalityTypeDiv = document.createElement('div');
-            personalityTypeDiv.textContent = `Nhóm tính cách của bạn: ${personalityType}`;
-            personalityTypeDiv.classList.add('personality-type', 'alert', 'alert-info');
-            resultContainer.appendChild(personalityTypeDiv);
+        
             document.getElementById('discTestForm').style.display = 'none';
-
+        
             // Move chart creation to the top
             const canvas = document.createElement('canvas');
             canvas.id = 'resultChart';
             canvas.classList.add('mt-3');
             resultContainer.appendChild(canvas);
-
+        
             const ctx = document.getElementById('resultChart').getContext('2d');
             const chartData = {
                 labels: ['D', 'I', 'S', 'C'],
@@ -256,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 ]
             };
-
+        
             const resultChart = new Chart(ctx, {
                 type: 'pie',
                 data: chartData,
@@ -271,51 +268,75 @@ document.addEventListener('DOMContentLoaded', function () {
                             text: 'Kết quả nhóm tính cách của bạn'
                         }
                     }
-                }
+        }
             });
-
-          
-
+        
+            const personalityTypeDiv = document.createElement('div');
+            personalityTypeDiv.textContent = `Nhóm tính cách của bạn: ${personalityType}`;
+            personalityTypeDiv.classList.add('personality-type', 'alert', 'alert-info');
+            resultContainer.appendChild(personalityTypeDiv);
+        
             if (personalityInfo) {
                 const infoDiv = document.createElement('div');
                 infoDiv.classList.add('personality-info', 'mt-3');
-
+        
                 const name = document.createElement('p');
-                name.textContent = `Tên phong cách: ${personalityInfo.personalityName}`;
-                name.classList.add('fw-bold');
+                name.innerHTML = `<strong>Tên phong cách:</strong> ${personalityInfo.personalityName}`;
                 infoDiv.appendChild(name);
-
+        
                 const style = document.createElement('p');
-                style.textContent = `Phong cách: ${personalityInfo.style.join(' ')}`;
+                style.innerHTML = `<strong>Phong cách:</strong>`;
+                const styleList = document.createElement('ul');
+                personalityInfo.style.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    styleList.appendChild(listItem);
+                });
+                style.appendChild(styleList);
                 infoDiv.appendChild(style);
-
+        
                 const leadershipStyle = document.createElement('p');
-                leadershipStyle.textContent = `Phong cách lãnh đạo: ${personalityInfo.leadershipStyle.join(' ')}`;
+                leadershipStyle.innerHTML = `<strong>Phong cách lãnh đạo:</strong>`;
+                const leadershipStyleList = document.createElement('ul');
+                personalityInfo.leadershipStyle.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    leadershipStyleList.appendChild(listItem);
+                });
+                leadershipStyle.appendChild(leadershipStyleList);
                 infoDiv.appendChild(leadershipStyle);
-
-                const improvementPoints = document.createElement('b');
-
-                improvementPoints.textContent = `Điểm cần cải thiện:`;
+        
+                const improvementPoints = document.createElement('p');
+                improvementPoints.innerHTML = `<strong>Điểm cần cải thiện:</strong>`;
+                const improvementPointsList = document.createElement('ul');
+                personalityInfo.improvementPoints.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    improvementPointsList.appendChild(listItem);
+                });
+                improvementPoints.appendChild(improvementPointsList);
                 infoDiv.appendChild(improvementPoints);
-                const improvementPoints1 = document.createElement('p');
-
-                improvementPoints1.textContent = `${personalityInfo.improvementPoints.join(' ')}`;
-                infoDiv.appendChild(improvementPoints1);
-                
+        
                 const careers = document.createElement('p');
-                careers.textContent = `Nghề nghiệp phù hợp: ${personalityInfo.suitableCareers.join(', ')}`;
+                careers.innerHTML = `<strong>Nghề nghiệp phù hợp:</strong>`;
+                personalityInfo.suitableCareers.forEach(item => {
+                    const badge = document.createElement('span');
+                    badge.classList.add('badge', 'bg-primary', 'me-1', 'mb-1');
+                    badge.textContent = item;
+                    careers.appendChild(badge);
+                });
                 infoDiv.appendChild(careers);
-
+        
                 resultContainer.appendChild(infoDiv);
             }
-
+        
             const resultTable = document.createElement('table');
             resultTable.classList.add('result-table', 'table', 'table-bordered', 'mt-3');
-
+        
             const headerRow = document.createElement('tr');
             const headerQuestion = document.createElement('th');
             headerQuestion.textContent = 'Câu hỏi';
-            const headerMost = document.createElement('th');
+        const headerMost = document.createElement('th');
             headerMost.textContent = 'Most (Giống bạn nhất)';
             const headerLeast = document.createElement('th');
             headerLeast.textContent = 'Least (Ít giống bạn nhất)';
@@ -323,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
             headerRow.appendChild(headerMost);
             headerRow.appendChild(headerLeast);
             resultTable.appendChild(headerRow);
-
+        
             results.forEach(result => {
                 const row = document.createElement('tr');
                 const cellQuestion = document.createElement('td');
@@ -337,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 row.appendChild(cellLeast);
                 resultTable.appendChild(row);
             });
-
+        
             resultContainer.appendChild(resultTable);
         }
 

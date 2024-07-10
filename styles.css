@@ -19,8 +19,11 @@ h1 {
 }
 
 p {
-    text-align: center;
+    text-align: justify;
     color: #666;
+}
+div{
+    text-align: center;
 }
 b{
     font-weight: bold;
