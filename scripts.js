@@ -192,7 +192,29 @@ document.addEventListener('DOMContentLoaded', function () {
             const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'));
             userInfoModal.show();
         });
-
+        function sendDataToGoogleSheets(data) {
+            fetch('https://script.google.com/macros/s/AKfycbx7N79uod4APVa_GKRiME8WGtyn9LSdKYd1OmBadbV-7BRqL0uUe6b1YEYp-mtfEtRn8Q/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+                mode: 'no-cors'     
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    console.log('Dữ liệu đã được lưu thành công!');
+                } else {
+                    console.error('Đã xảy ra lỗi khi lưu dữ liệu.');
+                }
+            })
+            .catch(error => {
+                
+            });
+        }
+        
+        
         function displayResults(userName, userEmail) {
             const resultContainer = document.getElementById('resultContainer');
             resultContainer.innerHTML = ''; // Clear previous results
@@ -427,7 +449,21 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         
             resultContainer.appendChild(percentageTable);
+        
+            // Prepare data to send
+            const dataToSend = {
+                userName: userName,
+                userEmail: userEmail,
+                personalityType: personalityType,
+                results: results,
+                mostCounts: mostCounts,
+                leastCounts: leastCounts
+            };
+        
+            // Send data to Google Sheets
+            sendDataToGoogleSheets(dataToSend);
         }
+        
         
 
         renderQuestion(currentQuestionIndex);
