@@ -73,22 +73,58 @@ input[type="radio"] {
     border: 2px solid #007bff;
     outline: none;
     cursor: pointer;
+    position: relative;
 }
 
-input[type="radio"]:checked {
+input[type="radio"]::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: background-color 0.2s;
+}
+
+input[type="radio"]:checked::before {
     background-color: #007bff;
-    border-color: #007bff;
 }
 
 input[type="radio"].least {
     border-color: #ff6b6b;
 }
 
-input[type="radio"].least:checked {
-    background-color: #ff6b6b;
-    border-color: #ff6b6b;
+input[type="radio"].least::before {
+    background-color: transparent;
 }
 
+input[type="radio"].least:checked::before {
+    background-color: #ff6b6b;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
 .result-container {
     margin-top: 20px;
 }
@@ -112,18 +148,5 @@ input[type="radio"].least:checked {
 
 canvas {
     margin-top: 20px;
-}
-
-.personality-type {
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.personality-info {
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 50%;
 }

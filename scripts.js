@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
         fetch('questions.json').then(response => response.json()),
         fetch('personality_info.json').then(response => response.json())
@@ -6,26 +6,29 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentQuestionIndex = 0;
         const questionsContainer = document.getElementById('questionsContainer');
         const userAnswers = {};
+        const questionTemplate = document.getElementById('questionTemplate');
+
 
         function renderQuestion(index) {
             questionsContainer.innerHTML = '';
             const question = questionsData[index];
-            const questionDiv = document.createElement('div');
-            questionDiv.classList.add('question');
-            
-            const questionTitle = document.createElement('p');
-            questionTitle.textContent = `${question.question} (${question.id}/25)`;
-            questionDiv.appendChild(questionTitle);
-            
-            const table = document.createElement('table');
+            const questionElement = questionTemplate.cloneNode(true);
+            questionElement.style.display = 'block';
+            questionElement.id = '';
+        
+            questionElement.querySelector('.question-title').textContent = `${question.question} (${question.id}/25)`;
+        
+            const table = questionElement.querySelector('table tbody');
+            table.innerHTML = '';
+        
             question.options.forEach((option, idx) => {
                 const row = document.createElement('tr');
-                
+        
                 const statementCell = document.createElement('td');
                 statementCell.classList.add('statement');
                 statementCell.textContent = option.text;
                 row.appendChild(statementCell);
-                
+        
                 const mostCell = document.createElement('td');
                 mostCell.classList.add('most');
                 const mostInput = document.createElement('input');
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mostInput.addEventListener('change', handleRadioChange);
                 mostCell.appendChild(mostInput);
                 row.appendChild(mostCell);
-                
+        
                 const leastCell = document.createElement('td');
                 leastCell.classList.add('least');
                 const leastInput = document.createElement('input');
@@ -54,16 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 leastInput.addEventListener('change', handleRadioChange);
                 leastCell.appendChild(leastInput);
                 row.appendChild(leastCell);
-                
+        
                 table.appendChild(row);
             });
-            questionDiv.appendChild(table);
-            questionsContainer.appendChild(questionDiv);
-            
+        
+            questionsContainer.appendChild(questionElement);
+        
             document.getElementById('prevButton').style.display = index > 0 ? 'inline-block' : 'none';
             document.getElementById('nextButton').style.display = index < questionsData.length - 1 ? 'inline-block' : 'none';
             document.getElementById('submitButton').style.display = index === questionsData.length - 1 ? 'inline-block' : 'none';
+            updateNextButtonState();
         }
+        
 
         function handleRadioChange(event) {
             const currentInput = event.target;
@@ -80,27 +85,68 @@ document.addEventListener('DOMContentLoaded', function() {
             const leastInput = document.querySelector(`input[name="q${questionId}_least"]:checked`);
 
             if (mostInput && leastInput && mostInput.value === leastInput.value) {
-                alert('Bạn không thể chọn cùng một câu trả lời cho Most và Least.');
+
+                Toastify({
+                    text: "Bạn không thể chọn cùng một câu trả lời cho Most và Least.",
+             
+                    style: {
+                        background: "linear-gradient(to right, #d55349, #d59894)",
+                    }
+                }).showToast();
                 currentInput.checked = false;
                 delete userAnswers[questionId][answerType];
             }
+
+            updateNextButtonState();
         }
 
-        window.nextQuestion = function() {
+        function updateNextButtonState() {
+            const mostInput = document.querySelector(`input[name="q${questionsData[currentQuestionIndex].id}_most"]:checked`);
+            const leastInput = document.querySelector(`input[name="q${questionsData[currentQuestionIndex].id}_least"]:checked`);
+            document.getElementById('nextButton').disabled = !(mostInput && leastInput);
+        }
+
+        window.nextQuestion = function () {
             if (currentQuestionIndex < questionsData.length - 1) {
                 currentQuestionIndex++;
                 renderQuestion(currentQuestionIndex);
             }
         }
 
-        window.prevQuestion = function() {
+        window.prevQuestion = function () {
             if (currentQuestionIndex > 0) {
                 currentQuestionIndex--;
                 renderQuestion(currentQuestionIndex);
             }
         }
 
-        document.getElementById('discTestForm').addEventListener('submit', function(event) {
+        window.submitUserInfo = function () {
+            const userName = document.getElementById('userName').value;
+            const userEmail = document.getElementById('userEmail').value;
+
+            if (userName && userEmail) {
+                const userInfoModalElement = document.getElementById('userInfoModal');
+                const userInfoModal = bootstrap.Modal.getInstance(userInfoModalElement);
+                userInfoModal.hide();
+                displayResults(userName, userEmail);
+            } else {
+                Toastify({
+                    text: "Vui lòng nhập đủ thông tin",
+                    duration: 3000,
+        
+                    gravity: "top", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                        background: "linear-gradient(to right, #d55349, #d59894)",
+                    },
+                    onClick: function () { } // Callback after click
+                }).showToast();
+
+            }
+        }
+
+        document.getElementById('discTestForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
             const results = [];
@@ -123,19 +169,57 @@ document.addEventListener('DOMContentLoaded', function() {
                     results.push({
                         question: questionNumber,
                         most: question.options[mostSelected - 1].text,
-                        least: question.options[leastSelected - 1].text
+                        least: question.options[mostSelected - 1].text
                     });
                 } else {
-                    alert(`Bạn chưa hoàn thành câu hỏi số ${questionNumber}`);
+                    Toastify({
+                        text: `Bạn chưa hoàn thành câu hỏi số ${questionNumber}`,
+                        duration: 3000,
+                     
+                        gravity: "top", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        style: {
+                            background: "linear-gradient(to right, #d55349, #d59894)",
+                        },
+                        onClick: function () { } // Callback after click
+                    }).showToast();
+
                     return;
                 }
             }
 
-            // Determine the top two groups for "Most"
+            const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'));
+            userInfoModal.show();
+        });
+
+        function displayResults(userName, userEmail) {
+            const resultContainer = document.getElementById('resultContainer');
+            const results = [];
+            const mostCounts = { D: 0, I: 0, S: 0, C: 0 };
+            const leastCounts = { D: 0, I: 0, S: 0, C: 0 };
+
+            for (let question of questionsData) {
+                const questionNumber = question.id.toString();
+                const mostSelected = userAnswers[questionNumber] && userAnswers[questionNumber].most;
+                const leastSelected = userAnswers[questionNumber] && userAnswers[questionNumber].least;
+
+                if (mostSelected && leastSelected) {
+                    const mostGroup = question.options[mostSelected - 1].group;
+                    const leastGroup = question.options[leastSelected - 1].group;
+                    mostCounts[mostGroup]++;
+                    leastCounts[leastGroup]++;
+                    results.push({
+                        question: questionNumber,
+                        most: question.options[mostSelected - 1].text,
+                        least: question.options[leastSelected - 1].text
+                    });
+                }
+            }
+
             const mostGroups = Object.entries(mostCounts).sort((a, b) => b[1] - a[1]);
             let topMostGroups = mostGroups.slice(0, 2);
 
-            // If top two groups have same count, use "Least" count to determine the order
             if (topMostGroups[0][1] === topMostGroups[1][1]) {
                 const firstGroup = topMostGroups[0][0];
                 const secondGroup = topMostGroups[1][0];
@@ -146,39 +230,73 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const personalityType = topMostGroups.map(group => group[0]).join('');
 
-            // Find personality information
             const personalityInfo = personalityData.find(info => info.personalityGroup === personalityType);
-
-            // Hide the form
-            document.getElementById('discTestForm').style.display = 'none';
-
-            // Display the personality type
             const personalityTypeDiv = document.createElement('div');
             personalityTypeDiv.textContent = `Nhóm tính cách của bạn: ${personalityType}`;
-            personalityTypeDiv.classList.add('personality-type');
+            personalityTypeDiv.classList.add('personality-type', 'alert', 'alert-info');
             resultContainer.appendChild(personalityTypeDiv);
+            document.getElementById('discTestForm').style.display = 'none';
 
-            // Display the personality information
+            // Move chart creation to the top
+            const canvas = document.createElement('canvas');
+            canvas.id = 'resultChart';
+            canvas.classList.add('mt-3');
+            resultContainer.appendChild(canvas);
+
+            const ctx = document.getElementById('resultChart').getContext('2d');
+            const chartData = {
+                labels: ['D', 'I', 'S', 'C'],
+                datasets: [
+                    {
+                        label: 'Most (Giống bạn nhất)',
+                        data: [mostCounts.D, mostCounts.I, mostCounts.S, mostCounts.C],
+                        backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(255, 99, 132, 0.6)'],
+                        borderColor: ['rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 99, 132, 1)'],
+                        borderWidth: 1
+                    }
+                ]
+            };
+
+            const resultChart = new Chart(ctx, {
+                type: 'pie',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Kết quả nhóm tính cách của bạn'
+                        }
+                    }
+                }
+            });
+
+          
+
             if (personalityInfo) {
                 const infoDiv = document.createElement('div');
-                infoDiv.classList.add('personality-info');
-                
+                infoDiv.classList.add('personality-info', 'mt-3');
+
                 const name = document.createElement('p');
                 name.textContent = `Tên phong cách: ${personalityInfo.personalityName}`;
+                name.classList.add('fw-bold');
                 infoDiv.appendChild(name);
-                
+
                 const style = document.createElement('p');
-                style.textContent = `Phong cách: ${personalityInfo.style.join(', ')}`;
+                style.textContent = `Phong cách: ${personalityInfo.style.join(' ')}`;
                 infoDiv.appendChild(style);
-                
+
                 const leadershipStyle = document.createElement('p');
-                leadershipStyle.textContent = `Phong cách lãnh đạo: ${personalityInfo.leadershipStyle.join(', ')}`;
+                leadershipStyle.textContent = `Phong cách lãnh đạo: ${personalityInfo.leadershipStyle.join(' ')}`;
                 infoDiv.appendChild(leadershipStyle);
-                
+
                 const improvementPoints = document.createElement('p');
-                improvementPoints.textContent = `Điểm cần cải thiện: ${personalityInfo.improvementPoints.join(', ')}`;
+                improvementPoints.textContent = `Điểm cần cải thiện: ${personalityInfo.improvementPoints.join(' ')}`;
                 infoDiv.appendChild(improvementPoints);
-                
+
                 const careers = document.createElement('p');
                 careers.textContent = `Nghề nghiệp phù hợp: ${personalityInfo.suitableCareers.join(', ')}`;
                 infoDiv.appendChild(careers);
@@ -186,11 +304,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 resultContainer.appendChild(infoDiv);
             }
 
-            // Create a table to display the results
             const resultTable = document.createElement('table');
-            resultTable.classList.add('result-table');
+            resultTable.classList.add('result-table', 'table', 'table-bordered', 'mt-3');
 
-            // Create table header
             const headerRow = document.createElement('tr');
             const headerQuestion = document.createElement('th');
             headerQuestion.textContent = 'Câu hỏi';
@@ -203,7 +319,6 @@ document.addEventListener('DOMContentLoaded', function() {
             headerRow.appendChild(headerLeast);
             resultTable.appendChild(headerRow);
 
-            // Populate table with results
             results.forEach(result => {
                 const row = document.createElement('tr');
                 const cellQuestion = document.createElement('td');
@@ -219,46 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             resultContainer.appendChild(resultTable);
-
-            // Create a canvas for the chart
-            const canvas = document.createElement('canvas');
-            canvas.id = 'resultChart';
-            resultContainer.appendChild(canvas);
-
-            // Create the chart
-            const ctx = document.getElementById('resultChart').getContext('2d');
-            const chartData = {
-                labels: ['D', 'I', 'S', 'C'],
-                datasets: [
-                    {
-                        label: 'Most (Giống bạn nhất)',
-                        data: [mostCounts.D, mostCounts.I, mostCounts.S, mostCounts.C],
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Least (Ít giống bạn nhất)',
-                        data: [leastCounts.D, leastCounts.I, leastCounts.S, leastCounts.C],
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    }
-                ]
-            };
-
-            const resultChart = new Chart(ctx, {
-                type: 'bar',
-                data: chartData,
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        });
+        }
 
         renderQuestion(currentQuestionIndex);
     }).catch(error => console.error('Error loading data:', error));
