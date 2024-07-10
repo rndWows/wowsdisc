@@ -293,10 +293,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 leadershipStyle.textContent = `Phong cách lãnh đạo: ${personalityInfo.leadershipStyle.join(' ')}`;
                 infoDiv.appendChild(leadershipStyle);
 
-                const improvementPoints = document.createElement('p');
-                improvementPoints.textContent = `Điểm cần cải thiện: ${personalityInfo.improvementPoints.join(' ')}`;
-                infoDiv.appendChild(improvementPoints);
+                const improvementPoints = document.createElement('b');
 
+                improvementPoints.textContent = `Điểm cần cải thiện:`;
+                infoDiv.appendChild(improvementPoints);
+                const improvementPoints1 = document.createElement('p');
+
+                improvementPoints1.textContent = `${personalityInfo.improvementPoints.join(' ')}`;
+                infoDiv.appendChild(improvementPoints1);
+                
                 const careers = document.createElement('p');
                 careers.textContent = `Nghề nghiệp phù hợp: ${personalityInfo.suitableCareers.join(', ')}`;
                 infoDiv.appendChild(careers);
