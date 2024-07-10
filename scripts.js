@@ -195,6 +195,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function displayResults(userName, userEmail) {
             const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = ''; // Clear previous results
+        
             const results = [];
             const mostCounts = { D: 0, I: 0, S: 0, C: 0 };
             const leastCounts = { D: 0, I: 0, S: 0, C: 0 };
@@ -212,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     results.push({
                         question: questionNumber,
                         most: question.options[mostSelected - 1].text,
-                        least: question.options[mostSelected - 1].text
+                        least: question.options[leastSelected - 1].text
                     });
                 }
             }
@@ -234,41 +236,77 @@ document.addEventListener('DOMContentLoaded', function () {
         
             document.getElementById('discTestForm').style.display = 'none';
         
-            // Move chart creation to the top
-            const canvas = document.createElement('canvas');
-            canvas.id = 'resultChart';
-            canvas.classList.add('mt-3');
-            resultContainer.appendChild(canvas);
+            // Ensure the chart container exists
+            let chartContainer = document.getElementById('resultChart');
+            if (!chartContainer) {
+                chartContainer = document.createElement('div');
+                chartContainer.id = 'resultChart';
+                chartContainer.classList.add('mt-3');
+                resultContainer.appendChild(chartContainer);
+            }
         
-            const ctx = document.getElementById('resultChart').getContext('2d');
-            const chartData = {
-                labels: ['D', 'I', 'S', 'C'],
-                datasets: [
-                    {
-                        label: 'Most (Giống bạn nhất)',
-                        data: [mostCounts.D, mostCounts.I, mostCounts.S, mostCounts.C],
-                        backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(255, 99, 132, 0.6)'],
-                        borderColor: ['rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 99, 132, 1)'],
-                        borderWidth: 1
+            // Highcharts Pie Chart with custom animation
+            Highcharts.chart('resultChart', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Kết quả nhóm tính cách của bạn'
+                },
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                subtitle: {
+                    text: 'Source: Custom Test'
+                },
+                plotOptions: {
+                    series: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: [{
+                            enabled: true,
+                            distance: 20
+                        }, {
+                            enabled: true,
+                            distance: -40,
+                            format: '{point.percentage:.1f}%',
+                            style: {
+                                fontSize: '1.2em',
+                                textOutline: 'none',
+                                opacity: 0.7
+                            },
+                            filter: {
+                                operator: '>',
+                                property: 'percentage',
+                                value: 10
+                            }
+                        }]
                     }
-                ]
-            };
-        
-            const resultChart = new Chart(ctx, {
-                type: 'pie',
-                data: chartData,
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
+                },
+                series: [{
+                    name: 'Percentage',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: 'D',
+                            y: mostCounts.D
                         },
-                        title: {
-                            display: true,
-                            text: 'Kết quả nhóm tính cách của bạn'
+                        {
+                            name: 'I',
+                            sliced: true,
+                            selected: true,
+                            y: mostCounts.I
+                        },
+                        {
+                            name: 'S',
+                            y: mostCounts.S
+                        },
+                        {
+                            name: 'C',
+                            y: mostCounts.C
                         }
-                    }
-        }
+                    ]
+                }]
             });
         
             const personalityTypeDiv = document.createElement('div');
@@ -336,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const headerRow = document.createElement('tr');
             const headerQuestion = document.createElement('th');
             headerQuestion.textContent = 'Câu hỏi';
-        const headerMost = document.createElement('th');
+            const headerMost = document.createElement('th');
             headerMost.textContent = 'Most (Giống bạn nhất)';
             const headerLeast = document.createElement('th');
             headerLeast.textContent = 'Least (Ít giống bạn nhất)';
@@ -360,7 +398,37 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         
             resultContainer.appendChild(resultTable);
+        
+            // Calculate percentages
+            const totalMost = mostCounts.D + mostCounts.I + mostCounts.S + mostCounts.C;
+            const percentageTable = document.createElement('table');
+            percentageTable.classList.add('percentage-table', 'table', 'table-bordered', 'mt-3');
+        
+            const percentageHeaderRow = document.createElement('tr');
+            const headerType = document.createElement('th');
+            headerType.textContent = 'Loại';
+            const headerPercentage = document.createElement('th');
+            headerPercentage.textContent = 'Phần trăm (%)';
+            percentageHeaderRow.appendChild(headerType);
+            percentageHeaderRow.appendChild(headerPercentage);
+            percentageTable.appendChild(percentageHeaderRow);
+        
+            const types = ['D', 'I', 'S', 'C'];
+            types.forEach(type => {
+                const row = document.createElement('tr');
+                const cellType = document.createElement('td');
+                cellType.textContent = type;
+                const cellPercentage = document.createElement('td');
+                const percentage = ((mostCounts[type] / totalMost) * 100).toFixed(2);
+                cellPercentage.textContent = `${percentage}%`;
+                row.appendChild(cellType);
+                row.appendChild(cellPercentage);
+                percentageTable.appendChild(row);
+            });
+        
+            resultContainer.appendChild(percentageTable);
         }
+        
 
         renderQuestion(currentQuestionIndex);
     }).catch(error => console.error('Error loading data:', error));

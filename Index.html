@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -9,11 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
 </head>
 <body>
     <div class="container">
     
-        <h1>Kiểm tra DISC của bạn</h1>
+        <h1>Test DISC</h1>
  
         <form id="discTestForm">
             <p>Đánh dấu vào câu trả lời phù hợp nhất (Most) và không phù hợp nhất (Least)</p>
@@ -25,8 +28,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">Nội dung</th>
-                                <th scope="col">Most</th>
-                                <th scope="col">Least</th>
+                                <th scope="col">Giống nhất (most)</th>
+                                <th scope="col">Khác nhất (Least)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,7 +49,10 @@
                 <button type="submit" class="btn btn-success" id="submitButton" style="display: none;">Nộp kết quả</button>
             </div>
         </form>
-        <div id="resultContainer" class="result-container mt-3"></div>
+        <div id="resultContainer">
+            <div id="resultChart"></div>
+        </div>
+        
     </div>
 
     <!-- Modal -->
