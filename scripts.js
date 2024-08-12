@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     Promise.all([
-        fetch('questions.json').then(response => response.json()),
-        fetch('personality_info.json').then(response => response.json())
+        fetch('https://rndwows.github.io/wowsdisc/questions.json').then(response => response.json()),
+        fetch('https://rndwows.github.io/wowsdisc/personality_info.json').then(response => response.json())
     ]).then(([questionsData, personalityData]) => {
         let currentQuestionIndex = 0;
         const questionsContainer = document.getElementById('questionsContainer');
